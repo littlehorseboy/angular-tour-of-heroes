@@ -1,15 +1,13 @@
 <h2>My Heroes</h2>
 
 <mat-nav-list>
-  <mat-list-item
-    *ngFor="let hero of heroes"
-    [class.active]="hero === selectedHero"
-  >
-    <div class="list-item-text-container" (click)="onSelect(hero)">
+  <mat-list-item *ngFor="let hero of heroes">
+    <a
+      class="list-item-text-container"
+      routerLink="/detail/{{ hero.id }}"
+    >
       <div class="list-item-text-container--id">{{ hero.id }}</div>
       <div class="list-item-text-container--name">{{ hero.name }}</div>
-    </div>
+    </a>
   </mat-list-item>
 </mat-nav-list>
-
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>

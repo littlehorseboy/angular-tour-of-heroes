@@ -1,0 +1,13 @@
+<h3>Top Heroes</h3>
+
+<div class="root">
+  <a
+    *ngFor="let hero of heroes"
+    routerLink="/detail/{{ hero.id }}"
+    class="card-container"
+  >
+    <mat-card class="card">
+      {{hero.name}}
+    </mat-card>
+  </a>
+</div>
