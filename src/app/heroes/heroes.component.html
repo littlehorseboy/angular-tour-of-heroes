@@ -2,13 +2,22 @@
 
 <mat-nav-list>
   <mat-list-item *ngFor="let hero of heroes">
-    <a
-      class="list-item-text-container"
-      routerLink="/detail/{{ hero.id }}"
-    >
-      <div class="list-item-text-container--id">{{ hero.id }}</div>
-      <div class="list-item-text-container--name">{{ hero.name }}</div>
-    </a>
+    <div class="list-item-container">
+      <a
+        class="list-item-a-link"
+        routerLink="/detail/{{ hero.id }}"
+      >
+        <div class="list-item--id">{{ hero.id }}</div>
+        <div class="list-item--name">{{ hero.name }}</div>
+      </a>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="delete(hero)"
+      >
+        x
+      </button>
+    </div>
   </mat-list-item>
 </mat-nav-list>
 
