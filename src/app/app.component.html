@@ -1,10 +1,32 @@
-<h1>{{ title }}</h1>
+<div class="container-fluid my-3">
+  <h1 class="mb-0">{{ title }}</h1>
+</div>
 
-<nav>
-  <a routerLink="/dashboard">Dashboard</a>
-  <a routerLink="/heroes">Heroes</a>
-</nav>
+<div class="container-fluid my-3">
+  <nav>
+    <a
+      mat-raised-button
+      color="primary"
+      routerLink="/dashboard"
+      class="mr-3 text-decoration-none"
+    >
+      Dashboard
+    </a>
+    <a
+      mat-raised-button
+      color="primary"
+      routerLink="/heroes"
+      class="mr-3 text-decoration-none"
+    >
+      Heroes
+    </a>
+  </nav>
+</div>
 
-<router-outlet></router-outlet>
+<div class="container-fluid my-3">
+  <router-outlet></router-outlet>
+</div>
 
-<app-messages></app-messages>
+<div class="container-fluid my-3">
+  <app-messages></app-messages>
+</div>
