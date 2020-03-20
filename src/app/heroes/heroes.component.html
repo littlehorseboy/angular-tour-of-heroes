@@ -11,3 +11,18 @@
     </a>
   </mat-list-item>
 </mat-nav-list>
+
+<div>
+  <mat-form-field>
+    <mat-label>Hero name</mat-label>
+    <input #heroName matInput placeholder="name">
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="add(heroName.value); heroName.value = '';"
+  >
+    add
+  </button>
+</div>
